@@ -1,12 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="254" height="180" viewBox="0 0 254 180" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
-  <rect x="1" y="1" width="252" height="178" rx="12" fill="#1c1220" stroke="#ff4d8d" stroke-opacity="0.45" stroke-width="2"/>
-  <text x="20" y="30" font-size="14" font-weight="700" fill="#ffffff">Languages</text>
-  <circle cx="66" cy="106" r="40" fill="none" stroke="#ff4d8d" stroke-width="16" stroke-dasharray="132.06 119.26" stroke-dashoffset="-0.00" transform="rotate(-90 66 106)"/>
-  <circle cx="66" cy="106" r="40" fill="none" stroke="#ff3b5c" stroke-width="16" stroke-dasharray="68.29 183.04" stroke-dashoffset="-133.56" transform="rotate(-90 66 106)"/>
-  <circle cx="66" cy="106" r="40" fill="none" stroke="#3b82f6" stroke-width="16" stroke-dasharray="36.50 214.82" stroke-dashoffset="-203.35" transform="rotate(-90 66 106)"/>
-  <circle cx="66" cy="106" r="40" fill="none" stroke="#a78bfa" stroke-width="16" stroke-dasharray="8.47 242.85" stroke-dashoffset="-241.35" transform="rotate(-90 66 106)"/>
-  <rect x="130" y="53" width="10" height="10" rx="2" fill="#ff4d8d"/><text x="146" y="62" font-size="12" fill="#e8d5de">JavaScript</text>
-  <rect x="130" y="72" width="10" height="10" rx="2" fill="#ff3b5c"/><text x="146" y="81" font-size="12" fill="#e8d5de">CSS</text>
-  <rect x="130" y="91" width="10" height="10" rx="2" fill="#3b82f6"/><text x="146" y="100" font-size="12" fill="#e8d5de">HTML</text>
-  <rect x="130" y="110" width="10" height="10" rx="2" fill="#a78bfa"/><text x="146" y="119" font-size="12" fill="#e8d5de">Python</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="254" height="148" viewBox="0 0 254 148" role="img" aria-label="Language distribution">
+  <defs><linearGradient id="surface" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#241529"/><stop offset="100%" stop-color="#160d1b"/></linearGradient>
+    <linearGradient id="rim" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b3257"/><stop offset="100%" stop-color="#3a2040"/></linearGradient></defs>
+  <rect x="1" y="1" width="252" height="146" rx="13" fill="url(#surface)" stroke="url(#rim)" stroke-width="1"/>
+  <text x="20" y="28" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#fff6fa">Languages</text>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff6ba8" stroke-width="14" stroke-dasharray="121.88 91.75" stroke-dashoffset="-0.00" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff3b5c" stroke-width="14" stroke-dasharray="46.48 167.15" stroke-dashoffset="-123.38" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#5b9cff" stroke-width="14" stroke-dasharray="19.06 194.57" stroke-dashoffset="-171.36" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#b794f6" stroke-width="14" stroke-dasharray="9.92 203.70" stroke-dashoffset="-191.92" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#f9b4d1" stroke-width="14" stroke-dasharray="5.35 208.27" stroke-dashoffset="-203.35" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#7c6a85" stroke-width="14" stroke-dasharray="1.93 211.70" stroke-dashoffset="-210.20" transform="rotate(-90 64 88)"/>
+  <rect x="120" y="47" width="9" height="9" rx="2" fill="#ff6ba8"/><text x="135" y="56" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">Python</text>
+  <rect x="120" y="63" width="9" height="9" rx="2" fill="#ff3b5c"/><text x="135" y="72" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">JavaScript</text>
+  <rect x="120" y="79" width="9" height="9" rx="2" fill="#5b9cff"/><text x="135" y="88" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">HTML</text>
+  <rect x="120" y="95" width="9" height="9" rx="2" fill="#b794f6"/><text x="135" y="104" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">CSS</text>
+  <rect x="120" y="111" width="9" height="9" rx="2" fill="#f9b4d1"/><text x="135" y="120" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">Java</text>
+  <rect x="120" y="127" width="9" height="9" rx="2" fill="#7c6a85"/><text x="135" y="136" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">other</text>
 </svg>
