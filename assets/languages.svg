@@ -3,10 +3,10 @@
     <linearGradient id="rim" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b3257"/><stop offset="100%" stop-color="#3a2040"/></linearGradient></defs>
   <rect x="1" y="1" width="252" height="146" rx="13" fill="url(#surface)" stroke="url(#rim)" stroke-width="1"/>
   <text x="20" y="28" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#fff6fa">Languages</text>
-  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff6ba8" stroke-width="14" stroke-dasharray="112.03 101.60" stroke-dashoffset="-0.00" transform="rotate(-90 64 88)"/>
-  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff3b5c" stroke-width="14" stroke-dasharray="57.82 155.81" stroke-dashoffset="-113.53" transform="rotate(-90 64 88)"/>
-  <circle cx="64" cy="88" r="34" fill="none" stroke="#5b9cff" stroke-width="14" stroke-dasharray="30.80 182.82" stroke-dashoffset="-172.85" transform="rotate(-90 64 88)"/>
-  <circle cx="64" cy="88" r="34" fill="none" stroke="#b794f6" stroke-width="14" stroke-dasharray="6.98 206.65" stroke-dashoffset="-205.15" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff6ba8" stroke-width="14" stroke-dasharray="111.39 102.24" stroke-dashoffset="-0.00" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff3b5c" stroke-width="14" stroke-dasharray="57.48 156.15" stroke-dashoffset="-112.89" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#5b9cff" stroke-width="14" stroke-dasharray="30.62 183.01" stroke-dashoffset="-171.87" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#b794f6" stroke-width="14" stroke-dasharray="8.14 205.49" stroke-dashoffset="-203.99" transform="rotate(-90 64 88)"/>
   <rect x="120" y="47" width="9" height="9" rx="2" fill="#ff6ba8"/><text x="135" y="56" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">JavaScript</text>
   <rect x="120" y="63" width="9" height="9" rx="2" fill="#ff3b5c"/><text x="135" y="72" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">CSS</text>
   <rect x="120" y="79" width="9" height="9" rx="2" fill="#5b9cff"/><text x="135" y="88" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">HTML</text>
