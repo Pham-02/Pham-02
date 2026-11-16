@@ -5,11 +5,10 @@
 
 <!-- Photo (534px) + Spotify (256px). -->
 <!-- Spotify uses the default theme (320x445, scaled to 256x356). Delete &bar_color / &background_color from the URL for the stock green look. -->
-<!-- Replace YOUR-APP with your Vercel project name and YOUR_SPOTIFY_ID with the uid from SPOTIFY_SETUP.md. -->
 <div align="center">
   <img src="./assets/photo.jpg" width="534" height="356" align="top" alt="photo">
   <img src="./assets/gap.svg" width="10" height="1" align="top" alt="">
-  <a href="https://open.spotify.com"><img src="https://YOUR-APP.vercel.app/api/view?uid=YOUR_SPOTIFY_ID&cover_image=true&theme=default&show_offline=false&border_radius=12&background_color=1c1220&bar_color=ff4d8d&interchange=false" width="256" height="356" align="top" alt="Spotify now playing"></a>
+  <a href="https://open.spotify.com"><img src="https://spotify-github-profile.kittinanx.com/api/view?uid=31ixhuciudfdouf4pyif25nleqiq&cover_image=true&theme=default&show_offline=false&border_radius=12&background_color=1c1220&bar_color=ff4d8d&interchange=false" width="256" height="356" align="top" alt="Spotify now playing"></a>
 </div>
 
 <!-- Weather (414) + Projects (112) + Languages (254), 10px gaps = 800 total -->
