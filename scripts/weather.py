@@ -1,8 +1,11 @@
 """Generates assets/weather.svg for Tokyo using Open-Meteo (free, no API key)."""
-import base64, json, urllib.request, pathlib
+import base64, json, pathlib, sys, urllib.request
 from xml.sax.saxutils import escape
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+import theme as t
 
 CITY, LAT, LON, TZ = "TOKYO", 35.6762, 139.6503, "Asia/Tokyo"
+W, H = 414, 148
 URL = (f"https://api.open-meteo.com/v1/forecast?latitude={LAT}&longitude={LON}"
        "&current=temperature_2m,weather_code"
        "&daily=temperature_2m_max,temperature_2m_min,weather_code"
@@ -19,51 +22,52 @@ CODES = {0: "Clear sky", 1: "Mostly clear", 2: "Partly cloudy", 3: "Overcast",
 ASSETS = pathlib.Path(__file__).resolve().parent.parent / "assets"
 
 def background():
-    """Uses assets/weather-bg.gif (animated) or .webp/.jpg/.png if present, else a pink/dark gradient."""
-    for name, mime in (("weather-bg.gif", "gif"), ("weather-bg.webp", "webp"), ("weather-bg.jpg", "jpeg"), ("weather-bg.png", "png")):
+    """assets/weather-bg.gif (animated) or .webp/.jpg/.png if present, else the plain card surface."""
+    for name, mime in (("weather-bg.gif", "gif"), ("weather-bg.webp", "webp"),
+                       ("weather-bg.jpg", "jpeg"), ("weather-bg.png", "png")):
         f = ASSETS / name
         if f.exists():
             b64 = base64.b64encode(f.read_bytes()).decode()
-            return (f'<image href="data:image/{mime};base64,{b64}" x="0" y="0" width="414" height="180" '
-                    'preserveAspectRatio="xMidYMid slice" clip-path="url(#card)"/>')
-    return '<rect width="414" height="180" fill="url(#fallback)" clip-path="url(#card)"/>'
+            return (f'<image href="data:image/{mime};base64,{b64}" x="0" y="0" width="{W}" height="{H}" '
+                    'preserveAspectRatio="xMidYMid slice" clip-path="url(#clip)"/>'
+                    f'<rect width="{W}" height="{H}" fill="url(#shade)" clip-path="url(#clip)"/>')
+    return ""
 
 def build_svg(d):
     cur, day = d["current"], d["daily"]
     temp = round(cur["temperature_2m"])
     now = cur["time"]                       # 2026-11-16T08:00
     stamp = f"{now[5:7]}/{now[8:10]} {now[11:16]}"
-    cond = CODES.get(cur["weather_code"], "—")
+    cond = CODES.get(cur["weather_code"], "-")
     hi, lo = round(day["temperature_2m_max"][0]), round(day["temperature_2m_min"][0])
-    t_cond = CODES.get(day["weather_code"][1], "—")
+    t_cond = CODES.get(day["weather_code"][1], "-")
     t_hi, t_lo = round(day["temperature_2m_max"][1]), round(day["temperature_2m_min"][1])
-    font = "-apple-system,Segoe UI,Helvetica,Arial,sans-serif"
-    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="414" height="180" viewBox="0 0 414 180" font-family="{font}">
-  <defs>
-    <clipPath id="card"><rect x="1" y="1" width="412" height="178" rx="12"/></clipPath>
-    <linearGradient id="fallback" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3a1330"/><stop offset="1" stop-color="#1c1220"/></linearGradient>
-    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#12081a" stop-opacity="0.82"/><stop offset="1" stop-color="#12081a" stop-opacity="0.45"/></linearGradient>
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img" aria-label="{escape(CITY.title())}: now {temp}°C, {escape(cond)}. Today high {hi}°, low {lo}°. Tomorrow {escape(t_cond)}, high {t_hi}°, low {t_lo}°.">
+  <defs>{t.defs()}
+    <clipPath id="clip"><rect x="1" y="1" width="{W-2}" height="{H-2}" rx="13"/></clipPath>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#12081a" stop-opacity="0.78"/><stop offset="1" stop-color="#12081a" stop-opacity="0.38"/></linearGradient>
   </defs>
+  {t.card(W, H)}
   {background()}
-  <rect width="414" height="180" fill="url(#shade)" clip-path="url(#card)"/>
-  <rect x="1" y="1" width="412" height="178" rx="12" fill="none" stroke="#ff4d8d" stroke-opacity="0.55" stroke-width="2"/>
-  <text x="24" y="40" font-size="16" font-weight="700" letter-spacing="2.5" fill="#ff4d8d">{escape(CITY)}</text>
-  <text x="390" y="40" text-anchor="end" font-size="12" fill="#c9a8b8">{escape(stamp)}</text>
-  <text x="24" y="124" font-size="62" font-weight="800" fill="#ffffff">{temp}<tspan font-size="26" dy="-24">°C</tspan></text>
-  <line x1="178" y1="62" x2="178" y2="152" stroke="#ff4d8d" stroke-opacity="0.5" stroke-width="2"/>
-  <text x="196" y="76" font-size="19" fill="#ffffff">{escape(cond)}</text>
-  <text x="196" y="102" font-size="15" fill="#ffd6e4">High {hi}° / Low {lo}°</text>
-  <text x="196" y="132" font-size="13" fill="#c9a8b8">Tomorrow</text>
-  <text x="270" y="132" font-size="15" fill="#ffffff">{escape(t_cond)}</text>
-  <text x="196" y="154" font-size="15" fill="#ffd6e4">High {t_hi}° / Low {t_lo}°</text>
+  {t.rim(W, H)}
+  <g font-family="{t.FONT}">
+    <text x="20" y="28" fill="{t.ACCENT}" font-size="15" font-weight="600" letter-spacing="1.2">{escape(CITY)}</text>
+    <text x="394" y="28" text-anchor="end" fill="{t.MUTED}" font-size="11">{escape(stamp)}</text>
+    <text x="81.5" y="86" text-anchor="middle" dominant-baseline="central" fill="{t.TEXT}" font-size="54" font-weight="600">{temp}<tspan font-size="28">°C</tspan></text>
+    <line x1="163" y1="45" x2="163" y2="127" stroke="#6b3257" stroke-opacity="0.8"/>
+    <text x="180" y="58" fill="{t.TEXT}" font-size="17">{escape(cond)}</text>
+    <text x="180" y="83" fill="{t.SOFT}" font-size="15">High {hi}° / Low {lo}°</text>
+    <text x="180" y="110" fill="{t.MUTED}" font-size="12">Tomorrow</text>
+    <text x="248" y="110" fill="{t.SOFT}" font-size="14">{escape(t_cond)}</text>
+    <text x="180" y="131" fill="{t.SOFT}" font-size="15">High {t_hi}° / Low {t_lo}°</text>
+  </g>
 </svg>
 '''
 
 def main():
     with urllib.request.urlopen(URL, timeout=30) as r:
         data = json.load(r)
-    out = pathlib.Path(__file__).resolve().parent.parent / "assets" / "weather.svg"
-    out.write_text(build_svg(data), encoding="utf-8")
+    (ASSETS / "weather.svg").write_text(build_svg(data), encoding="utf-8")
 
 if __name__ == "__main__":
     main()
