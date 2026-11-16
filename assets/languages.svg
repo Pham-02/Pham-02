@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="254" height="180" viewBox="0 0 254 180" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif">
+  <rect x="1" y="1" width="252" height="178" rx="12" fill="#1c1220" stroke="#ff4d8d" stroke-opacity="0.45" stroke-width="2"/>
+  <text x="20" y="30" font-size="14" font-weight="700" fill="#ffffff">Languages</text>
+  <circle cx="66" cy="106" r="40" fill="none" stroke="#ff4d8d" stroke-width="16" stroke-dasharray="143.65 107.68" stroke-dashoffset="-0.00" transform="rotate(-90 66 106)"/>
+  <circle cx="66" cy="106" r="40" fill="none" stroke="#ff3b5c" stroke-width="16" stroke-dasharray="54.95 196.38" stroke-dashoffset="-145.15" transform="rotate(-90 66 106)"/>
+  <circle cx="66" cy="106" r="40" fill="none" stroke="#3b82f6" stroke-width="16" stroke-dasharray="22.69 228.64" stroke-dashoffset="-201.60" transform="rotate(-90 66 106)"/>
+  <circle cx="66" cy="106" r="40" fill="none" stroke="#a78bfa" stroke-width="16" stroke-dasharray="11.94 239.39" stroke-dashoffset="-225.79" transform="rotate(-90 66 106)"/>
+  <circle cx="66" cy="106" r="40" fill="none" stroke="#f9a8d4" stroke-width="16" stroke-dasharray="6.56 244.76" stroke-dashoffset="-239.23" transform="rotate(-90 66 106)"/>
+  <circle cx="66" cy="106" r="40" fill="none" stroke="#64748b" stroke-width="16" stroke-dasharray="2.53 248.80" stroke-dashoffset="-247.30" transform="rotate(-90 66 106)"/>
+  <rect x="130" y="53" width="10" height="10" rx="2" fill="#ff4d8d"/><text x="146" y="62" font-size="12" fill="#e8d5de">Python</text>
+  <rect x="130" y="72" width="10" height="10" rx="2" fill="#ff3b5c"/><text x="146" y="81" font-size="12" fill="#e8d5de">JavaScript</text>
+  <rect x="130" y="91" width="10" height="10" rx="2" fill="#3b82f6"/><text x="146" y="100" font-size="12" fill="#e8d5de">HTML</text>
+  <rect x="130" y="110" width="10" height="10" rx="2" fill="#a78bfa"/><text x="146" y="119" font-size="12" fill="#e8d5de">CSS</text>
+  <rect x="130" y="129" width="10" height="10" rx="2" fill="#f9a8d4"/><text x="146" y="138" font-size="12" fill="#e8d5de">Java</text>
+  <rect x="130" y="148" width="10" height="10" rx="2" fill="#64748b"/><text x="146" y="157" font-size="12" fill="#e8d5de">other</text>
+</svg>
