@@ -6,8 +6,10 @@
 <!-- Profile video: upload assets/profile-video.mp4 by dragging it into this README editor.
      Replace the placeholder URL below with the GitHub user-attachments URL GitHub generates. -->
 <div align="center">
-  <video src="PASTE_GITHUB_VIDEO_ATTACHMENT_URL_HERE" controls width="800">
-    Your browser does not support embedded video.
+  <video
+    src="https://github.com/user-attachments/assets/020f9e2d-0996-4b50-8379-af25382e7e60"
+    controls
+    width="670">
   </video>
 </div>
 
