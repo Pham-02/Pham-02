@@ -3,12 +3,14 @@
     <linearGradient id="rim" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#6b3257"/><stop offset="100%" stop-color="#3a2040"/></linearGradient></defs>
   <rect x="1" y="1" width="252" height="146" rx="13" fill="url(#surface)" stroke="url(#rim)" stroke-width="1"/>
   <text x="20" y="28" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="14" font-weight="600" fill="#fff6fa">Languages</text>
-  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff6ba8" stroke-width="14" stroke-dasharray="120.05 93.58" stroke-dashoffset="-0.00" transform="rotate(-90 64 88)"/>
-  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff3b5c" stroke-width="14" stroke-dasharray="50.02 163.61" stroke-dashoffset="-121.55" transform="rotate(-90 64 88)"/>
-  <circle cx="64" cy="88" r="34" fill="none" stroke="#5b9cff" stroke-width="14" stroke-dasharray="24.77 188.86" stroke-dashoffset="-173.06" transform="rotate(-90 64 88)"/>
-  <circle cx="64" cy="88" r="34" fill="none" stroke="#b794f6" stroke-width="14" stroke-dasharray="12.80 200.83" stroke-dashoffset="-199.33" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff6ba8" stroke-width="14" stroke-dasharray="133.66 79.97" stroke-dashoffset="-0.00" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#ff3b5c" stroke-width="14" stroke-dasharray="42.28 171.35" stroke-dashoffset="-135.16" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#5b9cff" stroke-width="14" stroke-dasharray="20.82 192.80" stroke-dashoffset="-178.94" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#b794f6" stroke-width="14" stroke-dasharray="10.65 202.98" stroke-dashoffset="-201.26" transform="rotate(-90 64 88)"/>
+  <circle cx="64" cy="88" r="34" fill="none" stroke="#f9b4d1" stroke-width="14" stroke-dasharray="0.50 213.13" stroke-dashoffset="-213.41" transform="rotate(-90 64 88)"/>
   <rect x="120" y="47" width="9" height="9" rx="2" fill="#ff6ba8"/><text x="135" y="56" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">Python</text>
   <rect x="120" y="63" width="9" height="9" rx="2" fill="#ff3b5c"/><text x="135" y="72" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">JavaScript</text>
   <rect x="120" y="79" width="9" height="9" rx="2" fill="#5b9cff"/><text x="135" y="88" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">CSS</text>
   <rect x="120" y="95" width="9" height="9" rx="2" fill="#b794f6"/><text x="135" y="104" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">HTML</text>
+  <rect x="120" y="111" width="9" height="9" rx="2" fill="#f9b4d1"/><text x="135" y="120" font-family="-apple-system,Segoe UI,Helvetica,Arial,sans-serif" font-size="12" fill="#f0d3e0">Dockerfile</text>
 </svg>
